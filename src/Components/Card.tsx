@@ -1,6 +1,6 @@
 import "../styles/Card.css";
 const Card = () => {
-    const score = localStorage.getItem("score") || "";
+    // const score = localStorage.getItem("score") || "";
   return (
     <>
       <div className="card-container">

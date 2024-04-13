@@ -12,7 +12,7 @@ const Signin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("creds", userCredential);
-        localStorage.setItem("login-token", userCredential!.user!.accessToken);
+        localStorage.setItem("login-token", userCredential?.user?.accessToken);
         history.push('/dashboard')
       })
       .catch((error) => {
