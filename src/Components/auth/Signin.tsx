@@ -11,7 +11,7 @@ const Signin = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        localStorage.setItem("login-token", userCredential.user.displayName || "");
+        localStorage.setItem("login-token", userCredential.user.displayName || "login-token");
         history.push("/dashboard");
       })
       .catch((error) => {

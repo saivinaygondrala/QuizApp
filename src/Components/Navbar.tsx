@@ -1,7 +1,9 @@
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
+import { useHistory } from "react-router-dom";
 export default function Navbar() {
-  const isLoggedIn = localStorage.getItem("login-token");
+  const history = useHistory()
+;  const isLoggedIn = localStorage.getItem("login-token");
   return (
     <>
       <nav className="nav-container">
@@ -37,7 +39,7 @@ export default function Navbar() {
               onClick={() => {
                 signOut(auth);
                 localStorage.clear();
-                window.location.href = window.location.href;
+                history.push("/signup");
               }}
             >
               Logout
