@@ -22,7 +22,7 @@ function App() {
         <Route path="/quiz">
           <Quiz/>
         </Route>
-        <Route path="/">
+        <Route path="/signin">
           <Signin/>
         </Route>
       </Switch>
