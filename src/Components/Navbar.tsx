@@ -1,7 +1,7 @@
-import { signOut } from 'firebase/auth';
-import {auth} from '../firebase'
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 export default function Navbar() {
-    const isLoggedIn=localStorage.getItem("login-token");
+  const isLoggedIn = localStorage.getItem("login-token");
   return (
     <>
       <nav className="nav-container">
@@ -14,22 +14,35 @@ export default function Navbar() {
           <li>
             <a href="#">Home</a>
           </li>
-         {isLoggedIn && <li>
-            <a href="/dashboard">Dashboard</a>
-          </li>}
+          {isLoggedIn && (
+            <li>
+              <a href="/dashboard">Dashboard</a>
+            </li>
+          )}
           <li>
             <a href="#">About</a>
           </li>
-          {!isLoggedIn && <li>
-            <a href="/signup">Signup</a>
-          </li>}
-          {!isLoggedIn && <li>
-            <a href="/signin">Signin</a>
-          </li>}
-         {isLoggedIn && <li onClick={()=>{
-            signOut(auth);
-            localStorage.clear();
-          }}>Logout</li>}
+          {!isLoggedIn && (
+            <li>
+              <a href="/signup">Signup</a>
+            </li>
+          )}
+          {!isLoggedIn && (
+            <li>
+              <a href="/signin">Signin</a>
+            </li>
+          )}
+          {isLoggedIn && (
+            <li
+              onClick={() => {
+                signOut(auth);
+                localStorage.clear();
+                window.location.href = window.location.href;
+              }}
+            >
+              Logout
+            </li>
+          )}
         </ul>
       </nav>
     </>

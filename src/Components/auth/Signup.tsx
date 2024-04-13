@@ -5,7 +5,7 @@ import "../../styles/Signup.css";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const signup = (e: any) => {
+  const signup = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
