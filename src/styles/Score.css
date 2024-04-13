@@ -1,0 +1,26 @@
+.score-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  
+  .score-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
