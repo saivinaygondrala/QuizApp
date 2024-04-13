@@ -1,0 +1,19 @@
+.signin-container{
+    display: flex;
+    justify-content: center;
+}
+.signin-form > *{
+    margin: .5rem;
+}
+.signin-form {
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.signin-form input,button{
+    padding: 1rem;
+    font-size: large;
+}
+
