@@ -14,6 +14,7 @@ export default function Quiz() {
         setScore((prev) => prev + 1);
       }
     });
+    localStorage.setItem("score",`${score}`);
   };
 
   return (

@@ -4,13 +4,17 @@
 nav{
     background: #000;
     margin: 0;
+    color: whitesmoke;
 }
-.Nav-Ele {
+.nav-container ul{
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     padding: 1rem;
     font-size: 20px;
+}
+.nav-container ul {
+    list-style-type: none;
 }
 .Nav-Ele li{
     padding: 1rem;

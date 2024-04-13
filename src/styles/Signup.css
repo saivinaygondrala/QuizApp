@@ -1,0 +1,19 @@
+.signup-container{
+    display: flex;
+    justify-content: center;
+}
+.signup-form > *{
+    margin: .5rem;
+}
+.signup-form {
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.signup-form input,button{
+    padding: 1rem;
+    font-size: large;
+}
+
