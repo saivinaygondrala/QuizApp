@@ -14,7 +14,7 @@ export default function Navbar() {
         </ul>
         <ul className="Nav-Ele">
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           {isLoggedIn && (
             <li>
@@ -22,7 +22,7 @@ export default function Navbar() {
             </li>
           )}
           <li>
-            <a href="#">About</a>
+            <a href="/">About</a>
           </li>
           {!isLoggedIn && (
             <li>

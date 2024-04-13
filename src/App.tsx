@@ -25,6 +25,12 @@ function App() {
         <Route path="/signin">
           <Signin/>
         </Route>
+        {!localStorage.getItem('login-token') ? <><Route path="/">
+          <Signin/>
+        </Route></> : <>
+        <Route path="/"> <Dashboard/></Route>
+        </>}
+
       </Switch>
     </div>
     </div>
