@@ -22,7 +22,7 @@ export default function Navbar() {
             </li>
           )}
           <li>
-            <a href="/">About</a>
+            <a href="/about">About</a>
           </li>
           {!isLoggedIn && (
             <li>

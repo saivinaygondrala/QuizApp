@@ -10,30 +10,41 @@ function App() {
   return (
     <Router>
       <div className="app">
-    <Navbar/>
-    <div className="content">
-      <Switch>
-        <Route path="/signup">
-          <Signup/>
-        </Route>
-        <Route path="/dashboard">
-          <Dashboard/>
-        </Route>
-        <Route path="/quiz">
-          <Quiz/>
-        </Route>
-        <Route path="/signin">
-          <Signin/>
-        </Route>
-        {!localStorage.getItem('login-token') ? <><Route path="/">
-          <Signin/>
-        </Route></> : <>
-        <Route path="/"> <Dashboard/></Route>
-        </>}
-
-      </Switch>
-    </div>
-    </div>
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/quiz">
+              <Quiz />
+            </Route>
+            <Route path="/signin">
+              <Signin />
+            </Route>
+            <Route path="/about">
+              <Signin />
+            </Route>
+            {!localStorage.getItem("login-token") ? (
+              <>
+                <Route path="/">
+                  <Signin />
+                </Route>
+              </>
+            ) : (
+              <>
+                <Route path="/">
+                  {" "}
+                  <Dashboard />
+                </Route>
+              </>
+            )}
+          </Switch>
+        </div>
+      </div>
     </Router>
   );
 }
